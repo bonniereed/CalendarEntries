@@ -18,17 +18,15 @@ var calDisplay = $("#calendar-display");
 var timeEntry = $("#time-display");
 var save = $(".saveBtn");
 
-// function displayTime() {
-//   var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-//   timeEntry.text(rightNow);
-// }
-
+//this time function creates a date and time variable to add the time entry as a text item on the HTML page.
 function displayTime() {
   var date = new Date();
   var timeString = date.toLocaleTimeString();
   console.log(timeString);
   return timeEntry.text(timeString);
 }
+
+//Upon reload this function will display the time, and pull any saved data from local storage
 $(document).ready(function () {
   displayTime();
 
@@ -72,7 +70,7 @@ $(document).ready(function () {
   console.log(fiveData);
   inputElFive.val(fiveData);
 });
-
+//This function will save any input from the table and verify which save button was used to enter the time slot and the value within the input
 function saveSubmit(event) {
   event.preventDefault();
   // localStorage.setItem(calDisplay.children
@@ -82,4 +80,5 @@ function saveSubmit(event) {
   console.log(sibs);
   localStorage.setItem(inputId, sibs);
 }
+//event listener for the save buttons
 save.on("click", saveSubmit);
