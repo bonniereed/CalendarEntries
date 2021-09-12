@@ -30,7 +30,6 @@ function displayTime() {
   return timeEntry.text(timeString);
 }
 $(document).ready(function () {
-  console.log("ready!");
   displayTime();
 
   var eightData = localStorage.getItem("eight-input");

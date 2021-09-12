@@ -27,7 +27,7 @@
       <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
-        <p id="currentDay" class="lead">Day of the week: <br /></p>
+        <p id="currentDay" class="lead"> <br /></p>
         <h2>
           Current Time: <br />
           <span id="time-display"></span>
@@ -39,16 +39,11 @@
         <table class="table table-bordered custom-table" id="calendar-table">
         <thead>
           <tbody id="calendar-display">
-              <tr>
-                <td >8AM<input class="time-block, row" id="eight-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
-              </td>  
-              <tr>
-              <tr>
-            <td >9AM<input class="time-block, row" id="nine-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
-          </td>  
-          <tr>
-            <tr>
-            <td class="hour">10AM<input class="time-block, row" id="ten-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+          <td class="hour col w-100">8AM<input class="time-block, row" id="eight-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+        </tr> </tr>
+        <td class="hour col w-100">9AM<input class="time-block, row" id="nine-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+      </tr>
+            <td class="hour col w-100">10AM<input class="time-block, row" id="ten-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
             <td class="hour">11AM<input class="time-block, row" id="eleven-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
