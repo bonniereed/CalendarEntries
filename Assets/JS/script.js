@@ -14,25 +14,73 @@ var inputElThree = $("#three-input");
 var inputElFour = $("#four-input");
 var inputElFive = $("#five-input");
 var calendarInput = $(".calendarInput");
-var timeEntry = $(".timeEntry");
+var calDisplay = $("#calendar-display");
+var timeEntry = $("#time-display");
+var save = $(".saveBtn");
 
-window.onload = function () {
-  // If sessionStorage is storing default values (ex. name), exit the function and do not restore data
-  if (sessionStorage.getItem(inputElEight) == inputElEight) {
-    return;
-  }
-
-  // If values are not blank, restore them to the fields
-  var name = sessionStorage.getItem(inputElEight);
-  if (name !== null) inputElEight.val(inputElEight);
-};
+// function displayTime() {
+//   var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+//   timeEntry.text(rightNow);
+// }
 
 function displayTime() {
-  Date.prototype.getUTCDay();
+  var date = new Date();
+  var timeString = date.toLocaleTimeString();
+  console.log(timeString);
+  return timeEntry.text(timeString);
 }
-x;
-projectFormEl.on("submit", handleProjectFormSubmit);
-projectDisplayEl.on("click", ".delete-project-btn", handleDeleteProject);
-dueDateInputEl.datepicker({ minDate: 1 });
+$(document).ready(function () {
+  console.log("ready!");
+  displayTime();
 
-setInterval(displayTime, 1000);
+  var eightData = localStorage.getItem("eight-input");
+  console.log(eightData);
+  inputElEight.val(eightData);
+
+  var nineData = localStorage.getItem("nine-input");
+  console.log(eightData);
+  inputElNine.val(nineData);
+
+  var tenData = localStorage.getItem("ten-input");
+  console.log(tenData);
+  inputElTen.val(tenData);
+
+  var elevenData = localStorage.getItem("eleven-input");
+  console.log(elevenData);
+  inputElEleven.val(elevenData);
+
+  var twelveData = localStorage.getItem("twelve-input");
+  console.log(twelveData);
+  inputElTwelve.val(twelveData);
+
+  var oneData = localStorage.getItem("one-input");
+  console.log(oneData);
+  inputElOne.val(oneData);
+
+  var twoData = localStorage.getItem("two-input");
+  console.log(twoData);
+  inputElTwo.val(twoData);
+
+  var threeData = localStorage.getItem("three-input");
+  console.log(threeData);
+  inputElThree.val(threeData);
+
+  var fourData = localStorage.getItem("four-input");
+  console.log(fourData);
+  inputElFour.val(fourData);
+
+  var fiveData = localStorage.getItem("five-input");
+  console.log(fiveData);
+  inputElFive.val(fiveData);
+});
+
+function saveSubmit(event) {
+  event.preventDefault();
+  // localStorage.setItem(calDisplay.children
+  var sibs = $(this).siblings().val();
+  var inputId = $(this).siblings().attr("id");
+  console.log(inputId);
+  console.log(sibs);
+  localStorage.setItem(inputId, sibs);
+}
+save.on("click", saveSubmit);
