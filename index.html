@@ -33,78 +33,50 @@
           <span id="time-display">00:00:00</span>
         </h2>
       </header>
-      <!-- <main class="container-fluid">
-        <div class="row">
-          <section class="col-12 col-md-4 col-lg-3">
-            <div class="card custom-card"></div>
-              <div class="card-body">
-                <div class="card-text">
-                  Book an appointment
-                </div>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">8AM</li>
-                <li class="list-group-item">9AM</li>
-                <li class="list-group-item">10AM</li>
-                <li class="list-group-item">11AM</li>
-                <li class="list-group-item">12PM</li>
-                <li class="list-group-item">1PM</li>
-                <li class="list-group-item">2PM</li>
-                <li class="list-group-item">3PM</li>
-                <li class="list-group-item">4PM</li>
-                <li class="list-group-item">5PM</li>
-              </ul>
-              <div class="card-footer">
-                <button class="btn btn-block custom-btn" data-toggle="modal" data-target="#project-modal">Book
-                  Appointment</button>
-              </div>
-            </div>
-          </div>
-        </section> -->
       </div>
           </main>
       <div class="table-responsive col">
-        <table class="table table-bordered custom-table">
+        <table class="table table-bordered custom-table" id="calendar-table">
         <thead>
             <tbody>
               <tr>
-                <td >8AM<input id="eight-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
+                <td >8AM<input class="time-block, row" id="eight-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
               </td>  
               <tr>
               <tr>
-            <td >9AM<input id="nine-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
+            <td >9AM<input class="time-block, row" id="nine-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
           </td>  
           <tr>
             <tr>
-            <td>10AM<input id="ten-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">10AM<input class="time-block, row" id="ten-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>11AM<input id="eleven-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">11AM<input class="time-block, row" id="eleven-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>12PM <input id="twelve-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">12PM <input class="time-block, row" id="twelve-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>1PM <input id="one-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">1PM <input class="time-block, row" id="one-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>2PM<inputids="two-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">2PM<input class="time-block, row" id="two-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>3PM <input id="three-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">3PM <input class="time-block, row" id="three-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>4PM <input id="four-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">4PM <input class="time-block, row" id="four-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <td>5PM <input id="five-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+            <td class="hour">5PM <input class="timeblock row" id="five-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           </tr>    
         </tbody>
           </div>
       
         <tbody id="calendar-display"></tbody>
-      </table> -->
+      </table>
       <!-- </div>
       <div
         class="modal fade custom-modal"
