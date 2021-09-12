@@ -20,144 +20,172 @@
     />
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
     <title>Work Day Scheduler</title>
-
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">Day of the week: <br/></p>
-      <h2>Current Time &amp; Date: <br /> <span id="time-display">00:00:00</span></h2>
-    </header>
-    <div class="table-responsive col">
-
-      <table class="table table-bordered custom-table">
+    <div>
+      <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead">Day of the week: <br /></p>
+        <h2>
+          Current Time &amp; Date: <br />
+          <span id="time-display">00:00:00</span>
+        </h2>
+      </header>
+      <!-- <main class="container-fluid">
+        <div class="row">
+          <section class="col-12 col-md-4 col-lg-3">
+            <div class="card custom-card"></div>
+              <div class="card-body">
+                <div class="card-text">
+                  Book an appointment
+                </div>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">8AM</li>
+                <li class="list-group-item">9AM</li>
+                <li class="list-group-item">10AM</li>
+                <li class="list-group-item">11AM</li>
+                <li class="list-group-item">12PM</li>
+                <li class="list-group-item">1PM</li>
+                <li class="list-group-item">2PM</li>
+                <li class="list-group-item">3PM</li>
+                <li class="list-group-item">4PM</li>
+                <li class="list-group-item">5PM</li>
+              </ul>
+              <div class="card-footer">
+                <button class="btn btn-block custom-btn" data-toggle="modal" data-target="#project-modal">Book
+                  Appointment</button>
+              </div>
+            </div>
+          </div>
+        </section> -->
+      </div>
+          </main>
+      <div class="table-responsive col">
+        <table class="table table-bordered custom-table">
         <thead>
+            <tbody>
+              <tr>
+                <td >8AM<input id="eight-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
+              </td>  
+              <tr>
+              <tr>
+            <td >9AM<input id="nine-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button>  </th>
+          </td>  
           <tr>
-            <th col-9>9AM <button class="saveBtn float-right">Save</button>  </th>
-          </tr>  
-          <tr>
-            <th>10AM <button class="saveBtn float-right">Save</button> </th>
+            <tr>
+            <td>10AM<input id="ten-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <th>11AM <button class="saveBtn float-right">Save</button> </th>
+            <td>11AM<input id="eleven-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
           </tr>
           <tr>
-            <th>12PM <button class="saveBtn float-right">Save</button> </th>
-          </tr>  
+            <td>12PM <input id="twelve-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+          </tr>
           <tr>
-            <th>1PM <button class="saveBtn float-right">Save</button> </th>
-          </tr>  
+            <td>1PM <input id="one-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+          </tr>
           <tr>
-            <th>2PM <button class="saveBtn float-right">Save</button> </th>
-          </tr>  
+            <td>2PM<inputids="two-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+          </tr>
           <tr>
-            <th>3PM <button class="saveBtn float-right">Save</button> </th>
-          </tr>  
+            <td>3PM <input id="three-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+          </tr>
           <tr>
-            <th>4PM <button class="saveBtn float-right">Save</button> </th>
-          </tr>  
+            <td>4PM <input id="four-input" type="text" placeholder=""><button class="saveBtn float-right">Save</button> </td>
+          </tr>
           <tr>
-            <th>5PM <button class="saveBtn float-right">Save</button> </th>
+            <td>5PM <input id="five-input" type="text" placeholder=""> <button class="saveBtn float-right">Save</button> </td>
+          </tr>
           </tr>    
-
+        </tbody>
           </div>
       
-        <tbody id="project-display"></tbody>
-      </table>
-      
-        <form id="eight">
-          <input type="text" class="form-input w-100" id="calendar-input-eight" name="calendar-input-eight" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptEight"></ul>
+        <tbody id="calendar-display"></tbody>
+      </table> -->
+      <!-- </div>
+      <div
+        class="modal fade custom-modal"
+        id="project-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="project-modal-form"
+      >
+        <!-- <div
+    class="modal fade custom-modal"
+    id="project-modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="project-modal-form"
+    aria-hidden="true"
+  > -->
+        <!-- <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="project-modal-form">
+                Book an appointment
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="appointment-form">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="appointment-details-input">Enter Appointment Details</label>
+                  <input
+                    type="text"
+                    id="appointment-details-input"
+                    class="form-control"
+                    placeholder="Enter the appointment details"
+                    required
+                  />
+                </div>
+              </div>
 
-        <form id="nine">
-          <input type="text" class="form-input w-100" id="calendar-input-nine" name="calendar-input-nine" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptNine"></ul>
-
-        <form id="ten">
-          <input type="text" class="form-input w-100" id="calendar-input-ten" name="calendar-input-ten" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptTen"></ul>
-
-        <form id="eleven">
-          <input type="text" class="form-input w-100" id="calendar-input-eleven" name="calendar-input-eleven" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptEleven"></ul>
-
-        <form id="twelve">
-          <input type="text" class="form-input w-100" id="calendar-input-twelve" name="calendar-input-twelve" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptTwelve"></ul>
-
-        <form id="one">
-          <input type="text" class="form-input w-100" id="calendar-input-one" name="calendar-input-one" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptOne"></ul>
-
-        <form id="two">
-          <input type="text" class="form-input w-100" id="calendar-input-two" name="calendar-input-two" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptTwo"></ul>
-
-        <form id="three">
-          <input type="text" class="form-input w-100" id="calendar-input-three" name="calendar-input-three" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptThree"></ul>
-
-        <form id="four">
-          <input type="text" class="form-input w-100" id="calendar-input-four" name="calendar-input-four" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptFour"></ul>
-
-        <form id="five">
-          <input type="text" class="form-input w-100" id="calendar-input-five" name="calendar-input-five" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptFive"></ul>
-
-        <form id="six">
-          <input type="text" class="form-input w-100" id="calendar-input-six" name="calendar-input-six" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptSix"></ul>
-
-        <form id="seven">
-          <input type="text" class="form-input w-100" id="calendar-input-seven" name="calendar-input-seven" placeholder="Appointment Details" />
-          <button class="btn btn-info saveBtn">Save</button>
-        </form>
-    
-        <ul id="calApptSeven"></ul>
+              <div class="form-group">
+                <label for="calendar-input">Appointment Time</label>
+                <select class="form-control" id="calendar-input">
+                  <option selected disabled>Select Appointment time:</option>
+                  <option value="eight">8AM</option>
+                  <option value="nine">9AM</option>
+                  <option value="ten">10AM</option>
+                  <option value="eight">11AM</option>
+                  <option value="nine">12PM</option>
+                  <option value="ten">1PM</option>
+                  <option value="eight">2PM</option>
+                  <option value="nine">3PM</option>
+                  <option value="ten">4PM</option>
+                  <option value="ten">5PM</option>
+                </select>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn custom-btn">
+                  Book Appointment
+                </button> -->
+              <!-- </div> -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+              <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+              <script src="./Assets/JS/script.js"></script>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <script src="./Assets/JS/script.js"></script>
   </body>
 </html>
